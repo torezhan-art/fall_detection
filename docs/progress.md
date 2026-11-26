@@ -91,7 +91,7 @@ Notes:
 | **Average of LightGBM + CNN (no aug.)** | **95.3** | **89.9** | **about half** | — |
 
 - At the recording level, LightGBM and the CNN without augmentation are **tied**.
-- **Averaging their outputs** gives the best result: the two models make mistakes on different activities, so false alarms roughly halve. This result is not yet saved as a file in `results/`.
+- **Averaging their outputs** gives the best result: the two models make mistakes on different activities, so false alarms roughly halve (68–69 → 34.5 per hour). Reproduced by `src/models/combine_models.py` → `results/rules_combined_lgbm_cnn_predictions.csv`; per-activity false alarms in `results/false_alarms_by_activity.csv` (Figure `figures/07_false_alarms_by_activity`).
 - **"2 windows in a row" rule:** small gain (ADL recordings clean 81 → 85%). Jumps and table hits are unchanged, because their impacts also span 2 windows. 52% of falls would take longer than the watch's 1.5 s detection budget, which puts REQ-2 (3.0 s end-to-end) at risk.
 - **Hybrid rule** (alarm on one very confident window, otherwise require 2 in a row): the same small gain, with 7% of falls still over the 1.5 s detection budget.
 - **Decision: keep the single-window rule.**
@@ -144,7 +144,8 @@ Each window is checked two ways:
 
 ## 8. Next steps
 
-- [ ] Save the LightGBM + CNN average as a script and results file (currently not reproducible from `results/`).
+- [x] Save the LightGBM + CNN average as a script and results file (`src/models/combine_models.py`).
+- [x] Report figures from saved results (`src/plots/plot_results.py`): false alarms by activity, ROC/PR curves, float vs int8.
 - [ ] Decide whether to put both models on the chip (CNN plus LightGBM feature extraction and trees) or deploy the CNN alone.
 - [ ] Train the final model on all users and regenerate the int8 header file.
 - [x] Run TFLite Micro on the PC: golden vectors, firmware pre-processing, real arena size (section 6b).

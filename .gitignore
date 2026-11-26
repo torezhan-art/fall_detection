@@ -29,3 +29,6 @@ papers/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Claude Code local state and worktrees
+.claude/
