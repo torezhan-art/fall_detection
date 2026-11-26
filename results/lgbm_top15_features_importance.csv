@@ -1,0 +1,16 @@
+,mean,std
+a_max,43.1,11.48
+jerk_max,24.28,9.93
+a_kurt,4.23,1.4
+tilt_change,3.15,0.25
+w_max,2.82,0.36
+post_a_std,2.77,0.35
+f_entropy,2.6,0.36
+a_min,2.53,0.15
+pre_a_std,2.37,0.24
+post_w_mean,2.34,0.28
+acf_max,2.3,0.23
+pre_dip,2.23,0.35
+n_peaks,1.88,0.88
+f_dom,1.78,0.38
+a_skew,1.62,0.15

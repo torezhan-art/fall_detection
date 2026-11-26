@@ -1,0 +1,31 @@
+# Python environments and caches
+.venv/
+tflm_host/.venv-tools/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Datasets: WEDA-FALL has no licence (all rights reserved) and SisFall forbids
+# redistribution, so neither the raw data nor anything containing their sensor
+# values is published. Regenerate with codes/weda.py, codes/windows.py and src/features/.
+data/raw/
+data/processed/windows.npz
+data/processed/windows_meta.csv
+data/processed/features.csv
+models/*/fold*_golden.npz
+tflm_host/vectors/*
+!tflm_host/vectors/*_tflm_expected.i8
+!tflm_host/vectors/*_n.txt
+
+# Third-party sources and build output (re-downloadable / rebuildable, see tflm_host/README.md)
+tflm_host/third_party/
+tflm_host/build/
+
+# Copyrighted papers
+papers/
+
+# Office lock files and OS junk
+~$*
+.DS_Store
+Thumbs.db
+desktop.ini

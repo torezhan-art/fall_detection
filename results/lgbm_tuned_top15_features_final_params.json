@@ -1,0 +1,14 @@
+{
+  "candidate": 26,
+  "n_estimators": 427,
+  "learning_rate": 0.0787337200773908,
+  "num_leaves": 54,
+  "min_child_samples": 59,
+  "subsample": 0.8216144574156198,
+  "colsample_bytree": 0.6434302964541774,
+  "reg_lambda": 6.722400930398117,
+  "fall_weight_power": 0.0,
+  "subsample_freq": 1,
+  "random_state": 42,
+  "verbose": -1
+}

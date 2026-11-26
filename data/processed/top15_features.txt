@@ -1,0 +1,15 @@
+a_max
+jerk_max
+a_kurt
+w_max
+tilt_change
+n_peaks
+post_a_std
+a_min
+acf_max
+a_skew
+pre_dip
+pre_a_std
+post_w_mean
+f_dom
+f_entropy

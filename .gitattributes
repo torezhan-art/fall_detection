@@ -1,0 +1,8 @@
+* text=auto
+*.sh text eol=lf
+*.i8 binary
+*.tflite binary
+*.keras binary
+*.npz binary
+*.pptx binary
+*.png binary

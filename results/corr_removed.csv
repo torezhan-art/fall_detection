@@ -1,0 +1,4 @@
+removed,kept,rho,reason
+a_cv,a_std,0.998,same cost (cheap); a_std is simpler (listed first in the spec)
+w_std,w_max,0.969,same cost (cheap); w_max is simpler (listed first in the spec)
+a_std,a_max,0.96,a_std is more expensive (cheap) than a_max (almost free)
